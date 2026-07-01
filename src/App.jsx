@@ -14,6 +14,7 @@ import Dashboard from "./pages/Dashboard";
 import AdminDashboard from "./pages/AdminDashboard";
 import OrderDetails from "./pages/OrderDetails";
 import NotFound from "./pages/NotFound";
+import StoreDetails from "./pages/StoreDetails";
 
 const defaultUsers = [
   {
@@ -201,6 +202,10 @@ function App() {
             <ProductDetails products={products} addToCart={addToCart} />
           }
         />
+        <Route
+  path="/store/:id"
+  element={<StoreDetails products={products} addToCart={addToCart} />}
+/>
 
         <Route
           path="/cart"

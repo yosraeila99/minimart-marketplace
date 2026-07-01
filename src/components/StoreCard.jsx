@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function StoreCard({ store }) {
   return (
     <div className="store-card">
@@ -7,12 +9,14 @@ function StoreCard({ store }) {
         <span>{store.type}</span>
         <h3>{store.name}</h3>
 
-        <div className="store-details">
+        <div className="store-meta">
           <p>⭐ {store.rating}</p>
           <p>{store.deliveryTime}</p>
         </div>
 
-        <button>View Store</button>
+        <Link to={`/store/${store.id}`}>
+          <button>View Store</button>
+        </Link>
       </div>
     </div>
   );
